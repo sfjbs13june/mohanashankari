@@ -1,9 +1,10 @@
 package com.mohanashankari.app.mohanashankariwebmicroservice;
 
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
-@RestController
 
+
+import org.springframework.web.bind.annotation.*;
+
+@RestController
 public class AppController {
 
     @GetMapping("/get")
@@ -11,4 +12,18 @@ public class AppController {
         return "get data";
     }
 
+    @PostMapping("/post")
+    public String postData(){
+        return "post data";
+    }
+
+    @PutMapping("/put")
+    public String putData(){
+        return "put data";
+    }
+
+    @DeleteMapping("/delete")
+    public String deleteData(){
+        return "delete data";
+    }
 }
